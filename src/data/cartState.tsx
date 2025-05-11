@@ -35,8 +35,7 @@ const cartReducer = (state: CartState, action: CartDispatchProps) => {
       const productId = action.id;
       if (!productId || !Object.hasOwn(state.items, productId)) return state;
       const newItems = { ...state.items };
-      newItems[productId].count -= 1;
-      if (newItems[productId].count <= 0) delete newItems[productId];
+      delete newItems[productId];
       return { ...state, items: newItems };
     }
 
