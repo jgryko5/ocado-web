@@ -1,0 +1,50 @@
+#cartFooter {
+  display: flex;
+  flex-basis: 50%;
+  background-color: #0d1b2e;
+  width: 100%;
+}
+#cartRightSection,
+#cartLeftSection {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#cartRightSection {
+  display: flex;
+  justify-content: flex-end;
+}
+#cartLeftSection {
+  display: flex;
+  justify-content: flex-start;
+}
+#cartRightSection > a,
+button {
+  background-color: #535e6e;
+  color: whitesmoke;
+  font-size: 1em;
+  padding: 16px;
+  border: none;
+  text-decoration: none;
+}
+
+#cartTotal {
+  margin-right: 1em;
+  color: whitesmoke;
+  font-size: 1em;
+}
+
+#addProductSection {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#addProductSection > p {
+  color: whitesmoke;
+  font-size: 1em;
+}
+#addProductSection > button {
+  cursor: pointer;
+}

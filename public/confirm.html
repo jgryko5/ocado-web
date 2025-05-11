@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sklep internetowy</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1 id="title">Zamówienie złożone pomyślnie!</h1>
+      <section id="mainSection">
+        <section id="productsSection">
+          <table id="productTable">
+            <thead>
+              <tr>
+                <th>Nazwa</th>
+                <th>Ilość</th>
+              </tr>
+            </thead>
+            <tbody />
+          </table>
+          <div id="cartFooter">
+            <p id="cartTotal"></p>
+            <a href="/">Powrót do sklepu</a>
+          </div>
+        </section>
+      </section>
+    </div>
+    <script>
+      const orderData = localStorage.getItem("lastOrderSummary");
+      const table = document.getElementById("productTable");
+      if (orderData) {
+        const parsedOrderData = JSON.parse(orderData);
+
+        const orderTotal = document.getElementById("cartTotal");
+        for (let item of parsedOrderData.items) {
+          let row = table.insertRow();
+          let name = row.insertCell();
+          let count = row.insertCell();
+          name.innerHTML = item.name;
+          count.innerHTML = item.count;
+        }
+        orderTotal.innerHTML = `Razem: ${parsedOrderData.totalPrice}`;
+      } else {
+        let row = table.insertRow();
+        let emptyOrderMsg = row.insertCell();
+        emptyOrderMsg.id = "emptyOrderMsg";
+        emptyOrderMsg.innerHTML = "Zamówienie jest puste!";
+        document.getElementById("emptyOrderMsg").colSpan = "2";
+      }
+      localStorage.clear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 48px auto;
+}
+
+#topbar {
+  display: flex;
+  justify-content: end;
+  grid-row-start: 1;
+  background-color: #0d1b2e;
+}
+
+#main {
+  grid-row-start: 2;
+}
+
+#mainSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#productsSection {
+  width: 80%;
+}
+
+#goToCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 4);
+  height: 100%;
+  align-self: flex-end;
+  background-color: #535e6e;
+  color: whitesmoke;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+#title {
+  text-align: center;
+  font-size: 3em;
+  color: whitesmoke;
+}

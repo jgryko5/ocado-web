@@ -1,0 +1,19 @@
+td {
+  text-align: center;
+  padding: 1%;
+  color: whitesmoke;
+  justify-content: center;
+}
+
+#productTable {
+  background-color: #0d1b2e;
+}
+
+table {
+  padding: 20px;
+  width: 100%;
+}
+
+th {
+  color: whitesmoke;
+}
