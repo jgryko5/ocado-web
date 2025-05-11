@@ -104,5 +104,6 @@ const getOrderSummary = (cartData: CartState | null) => {
 export const saveOrderSummary = (cartData: CartState | null) => {
   const orderSummary = getOrderSummary(cartData);
   localStorage.setItem("lastOrderSummary", JSON.stringify(orderSummary));
-  window.location.href = "/confirm.html";
+  const siteBaseUrl = import.meta.env.VITE_SITE_PATH;
+  window.location.href = `${siteBaseUrl}/confirm.html`;
 };
