@@ -52,4 +52,4 @@ npm install
 npm run dev
 ```
 
-Aplikacja będzie dostępna pod adresem http://localhost:5173/
+Aplikacja będzie dostępna pod adresem http://localhost:5173/ocado-web

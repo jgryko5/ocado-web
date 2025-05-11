@@ -1,5 +1,5 @@
 import CartStateProvider from "@/data/cartState";
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 import ProductsListing from "@/pages/ProductsListing/ProductsListing";
 import Cart from "@/pages/Checkout/Cart";
 import Summary from "@/pages/Checkout/Summary";
