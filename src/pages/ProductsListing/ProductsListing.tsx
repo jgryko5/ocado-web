@@ -30,7 +30,7 @@ const ProductEntry: FC<ProductData> = (props) => {
     dispatch({ type: "ADD", id: props.id });
     alert(`Dodano pomyślnie ${props.name} do koszyka!`);
   }, [props.id]);
-  
+
   return (
     <tr id="productRow">
       <td>{props.name}</td>
