@@ -8,6 +8,7 @@ Aplikacja webowa symulująca uproszczony proces składania zamówienia w sklepie
 
 - Produkty są zdefiniowane w pliku `src/data.ts` jako statyczna lista obiektów
 - Jak w prawdziwym sklepie, użytkownik może dodać ograniczoną ilość jednego produktu do koszyka. Wspólna wartość ograniczenia dla wszystkich obiektów znajduje się w pliku `src/data.ts`.
+- Użytkownik nie może złożyć pustego zamówienia.
 - Po finalizacji zamówienia, użytkownik jest przekierowywany na oddzielną stronę zawierającą potwierdzenie złożonego zamówienia.
 
 ## Podejście
